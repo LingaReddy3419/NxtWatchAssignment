@@ -87,12 +87,12 @@ class Trending extends Component {
             }
 
             return (
-              <Link className="link-style" to={eachContent.link}>
-                <ListElement
-                  bgColor={activeBgColor}
-                  key={eachContent.id}
-                  color={activeColor}
-                >
+              <Link
+                className="link-style"
+                to={eachContent.link}
+                key={eachContent.id}
+              >
+                <ListElement bgColor={activeBgColor} color={activeColor}>
                   {icon}
                   <ListItem isDark={isDark} fontWeight={fontWeight}>
                     {eachContent.title}
@@ -208,8 +208,12 @@ class Trending extends Component {
           const textColor = isDark ? '#94a3b8' : '#64748b'
 
           return (
-            <Link className="link-style" to={`/videos/${id}`}>
-              <VideoListItem key={eachVideo.id}>
+            <Link
+              className="link-style"
+              to={`/videos/${id}`}
+              key={eachVideo.id}
+            >
+              <VideoListItem>
                 <VideoThumbNail
                   src={eachVideo.thumbnailUrl}
                   alt="video thumbnail"
