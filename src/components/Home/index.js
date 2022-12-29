@@ -342,7 +342,7 @@ class Home extends Component {
       <ThemeContext.Consumer>
         {value => {
           const {isDark} = value
-          const backgroundColor = isDark ? '#181818' : '#f8fafc'
+          const backgroundColor = isDark ? '#181818' : '#f9f9f9'
           const borderColor = isDark ? ' #606060' : '#d7dfe9'
           const color = isDark ? '#f1f1f1' : '#212121'
 

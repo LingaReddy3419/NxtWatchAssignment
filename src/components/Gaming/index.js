@@ -260,7 +260,7 @@ class Gaming extends Component {
       <ThemeContext.Consumer>
         {value => {
           const {isDark} = value
-          const backgroundColor = isDark ? '#0f0f0f' : '#f8fafc'
+          const backgroundColor = isDark ? '#0f0f0f' : '#f9f9f9'
           return (
             <>
               <Header />

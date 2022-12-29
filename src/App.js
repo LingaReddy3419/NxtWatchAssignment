@@ -8,11 +8,10 @@ import Home from './components/Home'
 import Trending from './components/Trending'
 import Gaming from './components/Gaming'
 import SavedVideos from './components/SavedVideos'
-import VideoItemDetail from './components/VideoItemDetail'
+import VideoItemDetails from './components/VideoItemDetails'
 import NotFound from './components/NotFound'
 import './App.css'
 
-// Replace your code here
 class App extends Component {
   state = {isDark: false, savedVideosList: []}
 
@@ -40,7 +39,6 @@ class App extends Component {
 
   render() {
     const {isDark, savedVideosList} = this.state
-    console.log(savedVideosList)
 
     return (
       <ThemeContext.Provider
@@ -60,7 +58,7 @@ class App extends Component {
           <ProtectedRoute
             exact
             path="/videos/:id"
-            component={VideoItemDetail}
+            component={VideoItemDetails}
           />
           <Route path="/not-found" component={NotFound} />
           <Redirect to="not-found" />

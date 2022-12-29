@@ -104,8 +104,13 @@ export const EmptyViewImage = styled.img`
   margin-top: 20px;
 `
 export const HeadingFail = styled.h1`
-  color: #212121;
+  color: ${props => props.color};
 `
+
+export const FailSavedVideosLine = styled.p`
+  color: ${props => props.color};
+`
+
 export const RetryButton = styled.button`
   height: 36px;
   width: 100px;

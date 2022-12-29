@@ -28,6 +28,7 @@ import {
   TopContainer,
   LogoElement,
   Heading,
+  FailSavedVideosLine,
 } from './styledComponents'
 
 const sideBarContent = [
@@ -111,23 +112,26 @@ class SavedVideos extends Component {
   )
 
   renderEmptyView = isDark => {
-    const color1 = isDark ? '#ffffff' : '#212121'
-    const bgColor = isDark ? '#0f0f0f' : '#ebebeb'
+    const color1 = isDark ? '#f9f9f9' : '#0f0f0f'
+    const color2 = isDark ? '#f9f9f9' : '#0f0f0f'
+    const backGroundColor = isDark ? '#0f0f0f' : '#f9f9f9'
     return (
-      <EmptyViewContainer bgColor={bgColor}>
+      <EmptyViewContainer bgColor={backGroundColor}>
         <EmptyViewImage
           src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-saved-videos-img.png"
           alt="no saved videos"
         />
         <HeadingFail color={color1}>No saved videos found</HeadingFail>
-        <p>You can save your videos while watching them</p>
+        <FailSavedVideosLine color={color2}>
+          You can save your videos while watching them
+        </FailSavedVideosLine>
       </EmptyViewContainer>
     )
   }
 
   renderSuccess = (isDark, savedVideosList) => {
     const isEmpty = savedVideosList.length === 0
-    const backgroundColor = isDark ? '#0f0f0f' : '#f8fafc'
+    const backgroundColor = isDark ? '#0f0f0f' : '#f9f9f9'
     return (
       <>
         {isEmpty ? (
